@@ -1,7 +1,7 @@
 def solution(arraylen, array):
     solution = 0
     for i, num in enumerate(array):
-        for num2 in array[i:]:
+        for num2 in array[i+1:]:
             if (array.__contains__(num+num2)):
                 solution += array.count(num+num2)
     return solution
