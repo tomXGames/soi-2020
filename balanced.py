@@ -1,5 +1,6 @@
 opening = ['(', '[', '{']
 closing = [')', ']', '}']
+
 def balanced(text):
     open = []
     for i, char in enumerate(text):
