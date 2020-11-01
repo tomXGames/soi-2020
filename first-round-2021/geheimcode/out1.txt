@@ -1,0 +1,149 @@
+Case #0: Yes
+ab
+Case #1: Yes
+ba
+Case #2: No
+Case #3: Yes
+aa
+Case #4: Yes
+bb
+Case #5: Yes
+ba
+Case #6: No
+Case #7: No
+Case #8: No
+Case #9: No
+Case #10: Yes
+bb
+Case #11: No
+Case #12: Yes
+ab
+Case #13: Yes
+bb
+Case #14: No
+Case #15: Yes
+ba
+Case #16: Yes
+ab
+Case #17: No
+Case #18: No
+Case #19: No
+Case #20: No
+Case #21: No
+Case #22: Yes
+ba
+Case #23: Yes
+ba
+Case #24: No
+Case #25: No
+Case #26: No
+Case #27: No
+Case #28: Yes
+ba
+Case #29: Yes
+ab
+Case #30: Yes
+ab
+Case #31: Yes
+ab
+Case #32: Yes
+ab
+Case #33: No
+Case #34: No
+Case #35: No
+Case #36: No
+Case #37: No
+Case #38: Yes
+ab
+Case #39: Yes
+aa
+Case #40: Yes
+ba
+Case #41: Yes
+ba
+Case #42: Yes
+ab
+Case #43: Yes
+aa
+Case #44: Yes
+ba
+Case #45: Yes
+ba
+Case #46: No
+Case #47: No
+Case #48: No
+Case #49: Yes
+ab
+Case #50: No
+Case #51: Yes
+ba
+Case #52: Yes
+ab
+Case #53: No
+Case #54: No
+Case #55: Yes
+bb
+Case #56: Yes
+ba
+Case #57: No
+Case #58: Yes
+ab
+Case #59: No
+Case #60: Yes
+aa
+Case #61: Yes
+ab
+Case #62: No
+Case #63: Yes
+ab
+Case #64: No
+Case #65: Yes
+ab
+Case #66: Yes
+ab
+Case #67: No
+Case #68: Yes
+ba
+Case #69: No
+Case #70: No
+Case #71: Yes
+ab
+Case #72: No
+Case #73: Yes
+ab
+Case #74: No
+Case #75: No
+Case #76: Yes
+bb
+Case #77: No
+Case #78: Yes
+bb
+Case #79: Yes
+bb
+Case #80: Yes
+bb
+Case #81: Yes
+aa
+Case #82: No
+Case #83: No
+Case #84: No
+Case #85: Yes
+ab
+Case #86: No
+Case #87: No
+Case #88: No
+Case #89: No
+Case #90: No
+Case #91: No
+Case #92: Yes
+ba
+Case #93: No
+Case #94: Yes
+ab
+Case #95: No
+Case #96: Yes
+ab
+Case #97: No
+Case #98: Yes
+ab
+Case #99: No
