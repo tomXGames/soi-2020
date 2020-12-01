@@ -1,4 +1,4 @@
-f = open('test3.txt', 'r').readlines()
+f = open('test11.txt', 'r').readlines()
 t = int(f[0])
 cases = []
 for i in range(t):
@@ -8,23 +8,30 @@ for i in range(t):
     m = [int(x) for x in f[i*2+2].split(' ')]
     case.append(m)
     cases.append(case)
-print(cases)
 solution = []
+# cases = [[8,[8, 2, 5, 2, 1, 5, 5, 8]]]
 for case in cases:
     m = case[1]
-    currentcut = []   
+    count = 0
+    opened = []
+    previous = -1
     for index, i in enumerate(m):
-        if index == 0:
-            previous = i
-            currentcut.append(i)
-        elif not i == previous:
-            if max(m) == i and i in currentcut:
-                previous = i
-            else: 
-                currentcut.append(i)
-                previous = i
-    solution.append(len(currentcut))
+        if not opened.__contains__(i):
+            opened.append(i)
+        toberemoved =[]
+        if previous < i:
+            for j in opened:
+                if j<i:
+                    toberemoved.append(j)
+                    count += 1
+            for j in toberemoved:
+                opened.remove(j)
+        previous = i
+    count += len(opened)
+    print(count)
+    solution.append(count)
+
+outf = open('out10.txt', 'w')
 print(solution)
-outf = open('out3.txt', 'w')
 for i, sol in enumerate(solution):
-    outf.write(f'Case #{i}: {sol} \n')
+    outf.write(f'Case #{i}: {sol} \n ')

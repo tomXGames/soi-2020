@@ -1,7 +1,0 @@
-2
-2 4
-milk
-lime
-2 5
-motor
-happy

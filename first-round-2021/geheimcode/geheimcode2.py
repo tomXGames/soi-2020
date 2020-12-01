@@ -1,50 +1,49 @@
 import string
-import random
-f = open('test7.txt', 'r').readlines()
+import sys
+
+# this code fucking sucks and fuck python i hate it, why am i still using it fuck my life
+sys.setrecursionlimit(100000)
+def secretcode(char, wordcount, letter, case, casenumber):
+    if casenumber == 0: print(case)
+    if solutions[casenumber][wordcount][string.ascii_lowercase.index(char)] == None:
+        indices = [index for index, element in enumerate(case[1][wordcount]) if element == char]
+        solutions[casenumber][wordcount][string.ascii_lowercase.index(char)] = letter
+        for i, word in enumerate(case[1]):
+            if not i == wordcount :
+                for c in indices:
+                    secretcode(word[c], i, letter, case, casenumber)
+
+f = open('test15.txt', 'r').readlines()
 t = int(f[0])
+del f[0]
+currentline=0
 cases = {}
 solutions = [None for i in range(t)]
 for i in range(t):
-    cases[i] = [[int(x) for x in f[i*3+1].split(' ')]]
-    solutions[i] = [[None for i in range(26)] for x in range(2)]
+    cases[i] = [[int(x) for x in f[0].split(' ')]]
+    del f[0]
+    solutions[i] = [[None for i in range(26)] for x in range(cases[i][0][0])]
+    cases[i].append([])
     for j in range(cases[i][0][0]):
-        cases[i].append([x.strip('\n') for x in f[i*3+j+2].split(' ')])
+        cases[i][1].append([x.strip('\n') for x in f[0].split(' ')][0])
+        del f[0]
+print(cases[0])
 
 for i, case in cases.items():
-    n = case[0][0]
-    l = case[0][1]
-    word1 = list(case[1][0])
-    word2 = list(case[2][0])
+    word1 = case[1][0]
     for k, c in enumerate(word1):
-        indices1 = [index for index, element in enumerate(word1) if element == word2[k]]
-        indices2 = [index for index, element in enumerate(word2) if element == c]
-        letter = random.choice(string.ascii_lowercase)
-        solutions[i][0][string.ascii_lowercase.index(c)] = letter
-        for l in indices1:
-            if solutions[i][1][string.ascii_lowercase.index(word2[l])]  == None:
-                solutions[i][1][string.ascii_lowercase.index(word2[l])] = letter
-            if solutions[i][0][string.ascii_lowercase.index(word2[l])] == None:
-                solutions[i][0][string.ascii_lowercase.index(word1[l])] = letter
-        for l in indices2:
-            if solutions[i][1][string.ascii_lowercase.index(word2[l])]  == None:
-                solutions[i][1][string.ascii_lowercase.index(word2[l])] = letter
-            if solutions[i][0][string.ascii_lowercase.index(word2[l])] == None:
-                solutions[i][0][string.ascii_lowercase.index(word1[l])] = letter
+        letter = string.ascii_lowercase[(string.ascii_lowercase.index(c)+1)%26]
+        secretcode(c, 0, letter, case, i)
 
-
-outf = open('out7.txt', 'w')
+outf = open('out15.txt', 'w')
 for i, val in enumerate(solutions):
     word = ''
-    print(cases[i][1][0])
-    print(solutions[i])
     for c in cases[i][1][0]:
         if c == None:
             word += 'a'
         else: word += solutions[i][0][string.ascii_lowercase.index(c)]
     outf.write(f'Case #{i}: {len(list(set(list(word))))} {word} \n')
-    print(val)
     for cs in val:
-        print('ok')
         for css in cs:
             if css == None:
                 outf.write('a')
