@@ -1,0 +1,16 @@
+[sample.01]
+input = """
+1
+"""
+output = """
+1
+"""
+
+[sample.02]
+input = """
+1
+"""
+output = """
+1
+"""
+
