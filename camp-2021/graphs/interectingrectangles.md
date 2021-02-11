@@ -42,7 +42,9 @@ rectangle1averagey = (((rectangle1averagey/abs(rectangle1averagey)) < 0) ? 0: re
 cornertocheck = rectangle2[rectangle1averagey * 2 + rectangle1averagex]
 if(rectangle1[1][0]>=cornertocheck[0]>=rectangle1[0][0] || rectangle1[0][1]>=cornertocheck[1]>=rectangle1[2][1])
 ```
+This doesn't work though, because it is also possible that no corners are inside the second rectangle. I could check for this case by looking at the diagonal corners (rectangle1[0], rectange1[2]) are on oppsite sides of the second rectangle. I can't think how to implement this from the top of my head.
 
-It is correct, because when two rectangles intersect at least the corner closest to the middle of the other rectangle is inside that other rectangle. I don'really know how to prove this formally...
+It is correct, because when two rectangles intersect at least the corner closest to the middle of the other rectangle is inside that other rectangle. I don'really know how to prove this formally. Also because if two opposite edges are on the opposite side of the second rectangle, they intersect.
 
 The run time is O(1), because it is always the same (a rectangle alwaysw only has 4 corners) and the additional Memory is alsoo constant.
+
