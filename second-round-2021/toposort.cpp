@@ -1,7 +1,8 @@
 #include <soi>
 #define rep(x) for(int i = 0; i < x; i++)
+using namespace std;
 
-bool dfs(vector<vector<int> >& graph, vector<int>& order, vector<bool>& visited, vector<bool>& currentsearchpath, int v){
+bool dfs(const vector<vector<int> >& graph, vector<int>& order, vector<bool>& visited, vector<bool>& currentsearchpath, int v){
     visited[v] = true;
     currentsearchpath[v] = true;
     for(int next: graph[v]){
@@ -17,7 +18,7 @@ bool dfs(vector<vector<int> >& graph, vector<int>& order, vector<bool>& visited,
     return false;
 }
 
-vector<int> toposort(vector<vector<int> >& graph){
+vector<int> toposort(const vector<vector<int> >& graph){
     int n = graph.size();
     vector<int> order;
     vector<bool> visited (n, false), currentsearchpath (n, false) ;
@@ -39,7 +40,7 @@ signed main() {
     rep(m){
         int a, b;
         cin >> a >> b;
-        graph[a].push_back(b);
+        graph[b].push_back(a);
     }
 
     vector<int> order = toposort(graph);

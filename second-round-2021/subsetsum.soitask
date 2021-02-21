@@ -1,0 +1,18 @@
+[sample.01]
+input="""
+6 8
+1 2 3 4 5 6
+"""
+output="""
+YES
+"""
+
+[sample.02]
+input="""
+6 8
+55 4 2 9 55 3
+"""
+output="""
+NO
+"""
+
