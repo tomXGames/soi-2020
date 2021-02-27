@@ -5,7 +5,6 @@
 #include <stack>
 #include <math.h>
 #include <iostream>
-#include <fstream>
 #define rep(x) for(int i = 0; i <x; i++)
 using namespace std;
 
