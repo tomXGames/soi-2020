@@ -12,8 +12,9 @@ signed main() {
         available.push_back(in);
         dp[i+1][0] = true;
     }
+    dp[0][0] = true;
     sort(available.begin(), available.end());
-    for(int i = 1; i <= n; i++){
+        for(int i = 1; i <= n; i++){
         for(int j = 1; j <= x; j++){
             if(j-available[i] >= 0){
                 dp[i][j] = dp[i-1][j] || dp[i-1][j-available[i]];
