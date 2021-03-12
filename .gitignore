@@ -1,2 +1,4 @@
 soiworkspace.json
 .vscode
+*.out
+*.exe
